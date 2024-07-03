@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Practice Gavrilenko | Tasks</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">ГЛАВНАЯ</a>
+        <a href="tasks.html" class="active">ЗАДАНИЯ</a>
+        <a href="#">НАСТРОЙКИ</a>
+    </header>
+    <h1>Список заданий</h1>
+    <h2>Задание 1. Ввод символов</h2>
+    <div class="task">
+        <input type="text" id="characterInput" oninput="updateCharacterCount()">
+        <p id="characterCount">Количество символов в строке: 0</p>
+    </div>
+    <h2>Задание 2. Ввод текста</h2>
+    <div class="task">
+        <textarea id="textInput" oninput="updateTextStats()"></textarea>
+        <p id="charCount">Количество символов: 0</p>
+        <p id="wordCount">Количество слов: 0</p>
+        <p id="lineCount">Количество строк: 0</p>
+    </div>
+    <h2>Задание 3. Проверка ввода</h2>
+    <div class="task">
+        <input type="text" id="inputCheck" oninput="checkInput()">
+        <p id="remainingCount">Осталось символов: 10</p>
+    </div>
+    <h2>Задание 4. Ограничение ввода</h2>
+    <div class="task">
+        <textarea type="text" id="inputLimit" oninput="limitInput()"></textarea>
+        <input type="checkbox" id="limitCheck" onchange="limitInput()">
+        <label for="limitCheck">Запретить превышение</label>
+        <p id="limitCount">Осталось символов: 10</p>
+    </div>
+    <h2>Задание 5. Слайдер картинок</h2>
+    <div class="slider">
+        <span id="prevBtn" class="disabled">&lt;</span>
+        <div id="sliderIMG">
+            <img src="images/img1.jpg">
+            <img src="images/img2.jpg">
+            <img src="images/img3.jpg">
+            <img src="images/img4.jpg">
+            <img src="images/img5.jpg">
+        </div>
+        <span id="nextBtn">&gt;</span>
+    </div>
+    <h2>Задание 6. Разность дат</h2>
+    <div class="task">
+        <p id="currentDate"></p>
+        <label>Дата события:</label>
+        <select id="day"></select>
+        <select id="month"></select>
+        <select id="year"></select>
+        <p id="eventDate"></p>
+    </div>
+    <h2>Задание 7. Прямоугольник</h2>
+    <div class="task">
+        <div id="outerRectangle" onclick="deselectSquare()">
+            <div id="innerSquare" onclick="selectSquare(event)"></div>
+        </div>
+    </div>
+
+
+    <script src="js/task1.js"></script>
+    <script src="js/task2.js"></script>
+    <script src="js/task3.js"></script>
+    <script src="js/task4.js"></script>
+    <script src="js/task5.js"></script>
+    <script src="js/task6.js"></script>
+    <script src="js/task7.js"></script>
+</body>
+
+</html>
